@@ -1,0 +1,454 @@
+/* === Fonts === */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
+
+/* === Reset & Base === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: url('https://www.transparenttextures.com/patterns/dark-mosaic.png'), linear-gradient(to right, #000428, #004e92);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* === Animation Classes === */
+.animate-fade-in-down {
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: fadeInDown 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+@keyframes fadeInDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Background Video === */
+#back-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 1;
+}
+
+/* === Header & Navigation === */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100px;
+  z-index: 1000;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.575);
+  padding: 14px 40px;
+}
+
+.logo img {
+  height: 90px;
+  width: 90px;
+  display: block;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.logo img:hover {
+  transform: scale(1.08) rotate(-8deg);
+  filter: drop-shadow(0 0 12px #00ffff) brightness(1.2);
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  padding: 0 50px;
+}
+
+header nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+}
+
+header nav a:hover {
+  color: #00ffff;
+}
+
+/* === Banner Container === */
+.banner-container {
+  max-width: 1200px;
+  margin: 200px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.left-content {
+  max-width: 50%;
+}
+
+.left-content h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 12px 0;
+}
+
+.left-content h2,
+.left-content h3 {
+  color: #ffffff;
+}
+
+.left-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.left-content h3 span,
+.highlight {
+  color: #00ffff;
+  font-weight: bold;
+}
+
+.left-content p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.right-content {
+  position: relative;
+}
+
+/* === Social Links === */
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 18px;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s, filter 0.2s;
+  cursor: pointer;
+  filter: brightness(0) saturate(100%) invert(67%) sepia(97%) saturate(749%) hue-rotate(135deg) brightness(102%) contrast(101%);
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+  filter: brightness(1.5) saturate(150%) drop-shadow(0 0 8px #00ffff);
+}
+
+/* === Profile Picture === */
+.profile-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #00ffff;
+  box-shadow: 0 0 30px #00ffff;
+  transition: transform 0.3s, filter 0.3s;
+
+}
+
+.profile-pic:hover {
+  transform: scale(1.08) rotate(-8deg);
+  filter: drop-shadow(0 0 16px #00ffff) brightness(1.2);
+}
+
+/* === Layout === */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px;
+  gap: 30px;
+  margin-top: 100px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === Left Panel === */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ffff;
+  border-radius: 10px;
+  transition: background 0.3s ease;  /* 💡 Transition added here */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00cccc;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.left-panel {
+  width: 200px;
+  height: 400px;
+  padding-right: 15px;
+  position: fixed;
+  color: #ffffff;
+}
+.left-panel a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+.left-panel h2 {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.left-panel ul li {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* === Main Panel === */
+.main-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px;
+  margin-left: 200px; /* Adjusted to account for the left panel */
+}
+
+.profile-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.profile-section img {
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.info {
+  text-align: left;
+}
+
+.info h1 {
+  font-size: 40px;
+}
+
+.info p {
+  padding: 1px;
+}
+
+.details {
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.details h3 {
+  margin-bottom: 10px;
+}
+
+/* === Right Panel === */
+.right-panel {
+  margin-top: 235px;
+  margin-left: 10px;
+}
+
+.interest-item {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 10px;
+}
+.skills-row {
+  display: flex;
+  justify-content: space-between; /* Spread boxes left and right */
+  gap: 60px; /* Optional spacing between boxes */
+  flex-wrap: wrap; /* Keeps it responsive */
+}
+  .skills-box  {
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  background: rgba(30, 30, 30, 0.349);
+  border: 2px solid #00ffff;
+  border-radius: 16px;
+  padding: 24px 32px;
+  margin-top: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  text-align: center;
+}
+
+.skills-box h4,
+.skills-box h5 {
+  margin-top: 0;
+  color: #00ffff;
+  letter-spacing: 1px;
+}
+
+.skills-box p {
+  color: #e0e0e0;
+}
+
+.skills-logos {
+  margin-top: px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; /* This centers the logos horizontally */
+  
+}
+
+.skills-logos img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  background: #222;
+  border-radius: 8px;
+  padding: 6px;
+  transition: transform 0.2s;
+}
+.skills-logos img:hover {
+  transform: scale(1.12);
+  background: #00ffff22;
+}
+
+#education {
+  color: #fff;
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+}
+.education-section li {
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+.edu-entry {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 20px;
+}
+
+.edu-entry img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+.edu-details h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #ff5252;
+}
+
+.edu-details .level {
+  font-style: italic;
+  color: #ccc;
+}
+
+.edu-details .description {
+  margin-top: 5px;
+  font-size: 0.95rem;
+}
+
+.contact-box {
+      width: 320px;
+      margin: 100px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-family: sans-serif;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      
+    }
+
+    .contact-box h2 {
+      text-align: center;
+    }
+
+    .contact-box input,
+    .contact-box textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #aaa;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    .contact-box button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .contact-box button:hover {
+      background-color: #0056b3;
+    }
+/* === Ripple effect === */
+.body-ripple {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: scale(0);
+  animation: body-ripple-anim 0.6s linear;
+  background: rgba(0,255,255,0.3);
+  z-index: 9999;
+}
+
+@keyframes body-ripple-anim {
+  to {
+    transform: scale(5);
+    opacity: 0;
+  }
+}
